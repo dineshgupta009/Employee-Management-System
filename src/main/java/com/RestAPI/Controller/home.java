@@ -93,7 +93,7 @@ public class home {
     @GetMapping("search")
     public ResponseEntity<List<Employee>> searchProduct(@RequestParam ("query") String query){
 
-        
+
         if(query != null){
             return ResponseEntity.ok(employeeService.searchEmployee(query.trim()));
         }
